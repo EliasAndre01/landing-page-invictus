@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --invictus-yellow: #f7e70c;
+  --invictus-dark: #121212;
+  --invictus-wine: #8c1c13;
+  --invictus-gray: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-6 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl mb-12 text-center max-w-3xl mx-auto;
+  }
+
+  .invictus-btn {
+    @apply bg-invictus-yellow text-black font-bold py-3 px-6 rounded-md uppercase tracking-wider hover:brightness-110 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .card-benefit {
+    @apply bg-invictus-yellow text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 h-full;
+  }
+
+  .fade-in {
+    @apply opacity-0 transition-opacity duration-1000;
+  }
+
+  .fade-in.appear {
+    @apply opacity-100;
+  }
+
+  .slide-in-left {
+    @apply -translate-x-20 opacity-0 transition-all duration-1000;
+  }
+
+  .slide-in-left.appear {
+    @apply translate-x-0 opacity-100;
+  }
+
+  .slide-in-right {
+    @apply translate-x-20 opacity-0 transition-all duration-1000;
+  }
+
+  .slide-in-right.appear {
+    @apply translate-x-0 opacity-100;
+  }
+
+  .slide-in-bottom {
+    @apply translate-y-20 opacity-0 transition-all duration-1000;
+  }
+
+  .slide-in-bottom.appear {
+    @apply translate-y-0 opacity-100;
+  }
+}
